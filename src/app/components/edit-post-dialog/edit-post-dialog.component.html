@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Edit Post</h2>
+
+<mat-dialog-content class="mat-typography">
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="data.post.title" name="title">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Body</mat-label>
+      <textarea matInput [(ngModel)]="data.post.body" name="body"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="post" cdkFocusInitial>Cancel</button>
+  <button mat-button (click)="save()">Save</button>
+</mat-dialog-actions>
